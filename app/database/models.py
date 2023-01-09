@@ -15,7 +15,7 @@ class User(mixins.ModelMixin):
     id = fields.IntField(pk=True)
     tg_id = fields.BigIntField(unique=True)
 
-    hour = fields.SmallIntField(null=True)
+    hour = fields.JSONField(null=True)
     hour_utc_offset = fields.SmallIntField(null=True)
 
     language_iso = fields.CharField(max_length=2, null=True)
